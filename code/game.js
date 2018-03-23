@@ -235,7 +235,7 @@ Player.prototype.moveY = function(step, level, keys) {
     else if(obstacle == "lava"){ //death animation plus respawn at (starting coord)
       console.log("Lava!!!! resetting spawn....");
       this.pos = new Vector(2, 15); //set back to spawn
-      this.size = new Vector(0.8, 1.5); //set the correct size
+      //this.size = new Vector(0.8, 1.5); //set the correct size
     }
   } else {
     this.pos = newPos;
