@@ -198,9 +198,10 @@ Level.prototype.obstacleAt = function(pos, size) {
   var yEnd = Math.ceil(pos.y + size.y);
 
   // Consider the sides and top and bottom of the level as walls
-  if (xStart < 0 || xEnd > this.width || yStart < 0 || yEnd > this.height)
+  if (xStart < 0 || xEnd > this.width || yStart < 0 )
     return "wall";
-
+  if (yEnd > this.height)
+    return "lava";
   // Check each grid position starting at yStart, xStart
   // for a possible obstacle (non null value)
   for (var y = yStart; y < yEnd; y++) {
